@@ -1,3 +1,6 @@
+exclude:
+ - update.sh
+ - json2csv.py
 page_gen:
  - data: news
    name: date
