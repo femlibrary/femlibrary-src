@@ -7,7 +7,7 @@ layout: default
 <ul class="books">
 {% for book in site.data.books %}
     <li>
-        <h3><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode={{ book.isbn }} target="_new">{{ book.title }}</a></h3>
+        <h3><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode={{ book.isbn }}" target="_new">{{ book.title }}</a></h3>
         <div class="meta">
             {{ book.author }} 저<br>
             ISBN: {{ book.isbn }}<br>
