@@ -12,9 +12,9 @@ title: 페미니즘 사전
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/default.css">
     <title>
-        {% if page.label != "" %}
+        {% if page.label %}
         {{ page.label }}
-        {% elsif page.title != "" %}
+        {% elsif page.title %}
         {{ page.title }}
         {% endif %}
     </title>
