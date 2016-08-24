@@ -10,7 +10,7 @@ python crawl.py
 echo "Categorize..."
 cd ../femlibrary-src
 git pull
-python json2csv.py
+python json2csv.py > _data/news.csv
 
 echo "Generate site..."
 jekyll b
