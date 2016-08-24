@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="main-books">
+<h2>페미니즘 관련 책 모음</h2>
+
+<ul class="books">
+{% for book in site.data.books %}
+    <li>
+        <h3><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode={{ book.isbn }} target="_new">{{ book.title }}</a></h3>
+        <div class="meta">
+            {{ book.author }} 저<br>
+            ISBN: {{ book.isbn }}<br>
+        </div>
+        <blockquote class="description">{{ book.description }}</blockquote>
+    </li>
+{% endfor %}
+</ul>
+
+</div>
+

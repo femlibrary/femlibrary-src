@@ -4,7 +4,7 @@ layout: default
 <div class="main-categories">
 <h2>카테고리: {{ page.label }}</h2>
 <ul class="articles">
-{% for article in site.data.news %}
+{% for article in site.data.news reversed %}
     {% assign tags = article.tags | split:"|" %}
     {% if tags contains page.label %}
     <li>
