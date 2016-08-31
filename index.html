@@ -3,6 +3,33 @@ layout: default
 title: 페미니즘 사전
 ---
 <div class="main-index">
+<h2>최근 뉴스</h2>
+<ul class="articles">
+{% for article in site.data.news reversed limit:5 %}
+    <li>
+        <h3><a href="/news/{{ article.date }}">{{ article.title }}</a></h3>
+        <div class="meta">
+            <div class="etc">
+            {{ article.date | slice: 0,4 }}-{{ article.date | slice: 4,2 }}-{{ article.date | slice: 6,2 }} /
+            {{ article.provider }} /
+            댓글: {{ article.comments }}개
+            </div>
+
+            <ul class="tags">
+                {% assign tags = article.tags | split:"|" %}
+                {% for tag in tags %}
+                    {% for category in site.data.categories %}
+                        {% if tag == category.label %}
+                        <li><a href="/categories/{{ category.slug }}">#{{ tag }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+
 <h2>분야별 뉴스 모음</h2>
 
 <ul class="categories">
